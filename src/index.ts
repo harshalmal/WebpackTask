@@ -1,18 +1,12 @@
  import _ from 'lodash';
 import printMe from './print.ts';
 
- function component() {
-   const element = document.createElement('div');
-  const btn = document.createElement('button');
-
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-   return element;
- }
-
- document.body.appendChild(component());
+function disp_details(id, name, mail_id) {
+   console.log("ID:", id);
+   console.log("Name", name);
+	
+   if (mail_id != undefined)
+      console.log("Email Id", mail_id);
+}
+disp_details(123, "John");
+disp_details(111, "mary", "mary@xyz.com");
